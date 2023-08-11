@@ -57,7 +57,7 @@ function calculate() {
             }	
 			
         } else {
-            reservationFeeOutput.textContent = "Please enter a valid number.";
+            reservationFeeOutput.textContent = "Please enter a valid number and fill all fields.";
             totalOutput.textContent = "";
             settlementAmountOutput.textContent = "";
             refundAmountOutput.textContent = "";
