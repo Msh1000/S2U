@@ -1,102 +1,119 @@
-body{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to right, #83a4d4, #b6fbff);
+body {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right, #83a4d4, #b6fbff);
 }
-span{
-    color: red;
+
+span {
+  color: red;
 }
-.wrapper{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform:translate(-50%, -50%);
-    padding: 40px;
-    width: 65%;
-    background: black;
-    border-radius: 30px;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-	text-align: center; /* Center-align text content */
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  width: 65%;
+  background: black;
+  border-radius: 30px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  text-align: center;
+  /* Center-align text content */
 }
-input{
-    outline: none;
-    border: none;
-    padding: 5px;
+
+input {
+  outline: none;
+  border: none;
+  padding: 5px;
 }
-button{
-    color: white;
-    padding: 10px;
-    border: 2px solid white;
-    background: black;
-    display: block;
-    margin-top: 10%;
-    cursor: pointer;
+
+button {
+  color: white;
+  padding: 10px;
+  border: 2px solid white;
+  background: black;
+  display: block;
+  margin-top: 10%;
+  cursor: pointer;
 }
 
 /* Add some basic styling to the text fields */
 input[type="text"],
 input[type="number"] {
-    padding: 5px;
-    margin: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    color: #333;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
 }
 
 /* Style the dropdown select */
 select {
-    padding: 5px;
-    margin: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    color: #333;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
 }
 
 /* Style the output paragraphs */
 p {
-    margin: 5px;
-    color: #00BFFF; /* Neon Blue */
+  margin: 5px;
+  color: #00BFFF;
+  /* Neon Blue */
 }
 
 /* Style the calculate button */
 #calculateButton {
-    padding: 10px 20px;
-    background-color: #007bff; /* Button color */
-    color: #fff; /* Text color */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-	text-align: center; /* Center-align text within buttons */
+  padding: 10px 20px;
+  background-color: #007bff;
+  /* Button color */
+  color: #fff;
+  /* Text color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  /* Center-align text within buttons */
 }
 
 /* Style the heading */
 h1 {
-    font-size: 36px;
-    color: #9370DB; /* Pearl Purple */
-    font-family: sans-serif; /* Fancy font */
-    margin-bottom: 20px;
+  font-size: 36px;
+  color: #9370DB;
+  /* Pearl Purple */
+  font-family: sans-serif;
+  /* Fancy font */
+  margin-bottom: 20px;
 }
 
 /* Style the warning message */
 .warning {
-    font-weight: bold;
-    color: #FF0000; /* Red */
+  font-weight: bold;
+  color: #FF0000;
+  /* Red */
 }
 
 .button-container {
-    display: flex;
-	justify-content: center; /* Center-align items horizontally */
-    gap: 10px;
-    margin-bottom: 10px;
-	text-align: center; /* Center-align text within buttons */
+  display: flex;
+  justify-content: center;
+  /* Center-align items horizontally */
+  gap: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  /* Center-align text within buttons */
 }
 
 #clearButton {
-    padding: 10px 20px;
-    background-color: #007bff; /* Button color */
-    color: #fff; /* Text color */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-	text-align: center; /* Center-align text within buttons */
+  padding: 10px 20px;
+  background-color: #007bff;
+  /* Button color */
+  color: #fff;
+  /* Text color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  /* Center-align text within buttons */
 }
