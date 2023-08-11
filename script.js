@@ -22,23 +22,22 @@ function calculate() {
 
     // Calculate sum of text field values
     var textFieldContainer = document.getElementById("textFieldContainer");
-    var textFields = textFieldContainer.querySelectorAll("input[type='text']");
-    var sumOfTextFields = 0;
-    var allFieldsValid = true;
+    var numberFields = textFieldContainer.querySelectorAll("input[type='number']");
+    var sumOfNumberFields = 0;
 
-    for (var i = 0; i < textFields.length; i++) {
-      var textFieldValue = parseFloat(textFields[i].value);
-      if (isNaN(textFieldValue)) {
-        allFieldsValid = false;
-        break;
-      }
-      sumOfTextFields += textFieldValue;
+  var allFieldsValid = true;
+
+    for (var i = 0; i < numberFields.length; i++) {
+        var fieldValue = parseFloat(numberFields[i].value);
+        if (!isNaN(fieldValue)) {
+            sumOfNumberFields += fieldValue;
+        }
     }
 
     if (allFieldsValid) {
       var total = inputValue + reservationFee;
-      var settlementAmount = inputValue - sumOfTextFields;
-      var refundAmount = sumOfTextFields + reservationFee;
+      var settlementAmount = inputValue - sumOfNumberFields;
+      var refundAmount = sumOfNumberFields + reservationFee;
 
       reservationFeeOutput.textContent = "Reservation Fee: R " + reservationFee.toFixed(2);
       totalOutput.textContent = "Total Order Amount: R " + total.toFixed(2);
