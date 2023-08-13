@@ -1,7 +1,7 @@
 body {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(to right, #83a4d4, #b6fbff);
+  background: linear-gradient(to right, #B7E1B7, #90c03d);
 }
 
 span {
@@ -14,106 +14,133 @@ span {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
-  width: 65%;
+  width: 60%;
   background: black;
   border-radius: 30px;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  box-shadow: #0b8d26 0px 12px 20px -10px;
   text-align: center;
-  /* Center-align text content */
 }
 
-input {
-  outline: none;
-  border: none;
-  padding: 5px;
-}
-
-button {
-  color: white;
-  padding: 10px;
-  border: 2px solid white;
-  background: black;
+/* Improved styles for labels */
+label {
   display: block;
-  margin-top: 10%;
-  cursor: pointer;
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 18.5px;
+  font-weight: bold;
 }
 
-/* Add some basic styling to the text fields */
-input[type="text"],
-input[type="number"] {
-  padding: 5px;
+#numberInput {
+  padding: 10px;
+  /* Adjust padding */
+  margin: 3px 0;
+  /* Adjust margins */
+  border: 0.5px solid #141818;
+  /* Adjust border thickness */
+  border-radius: 15px;
+  color: #FFFFFF;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #3b3b3b;
+  /* Add more styles as needed */
+}
+
+/* Improved styles for input fields */
+/* Styles for the dynamically generated number input fields */
+.custom-number-input {
+  /* Add your custom styles here */
   margin: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  color: #333;
+  padding: 8px;
+  border: 2px solid #141818;
+  border-radius: 15px;
+  color: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  /* Add shadow */
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+  background-color: #3b3b3b;
 }
 
-/* Style the dropdown select */
+/* Improved styles for dropdown select */
 select {
-  padding: 5px;
-  margin: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  color: #333;
+  padding: 10px;
+  /* Adjust padding */
+  margin: 3px 0;
+  /* Adjust margins */
+  border: 0.5px solid #141818;
+  /* Adjust border thickness */
+  border-radius: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #3b3b3b;
 }
 
-/* Style the output paragraphs */
+/* Existing styles for other elements */
 p {
   margin: 5px;
   color: #00BFFF;
-  /* Neon Blue */
+  text-align: center;
+  font-size: 17px;
+  padding: 3px;
 }
 
-/* Style the calculate button */
 #calculateButton {
-  padding: 10px 20px;
+  padding: 14px 20px;
   background-color: #007bff;
-  /* Button color */
   color: #fff;
-  /* Text color */
   border: none;
-  border-radius: 4px;
+  border-radius: 14px;
   cursor: pointer;
   text-align: center;
-  /* Center-align text within buttons */
+  font-size: 14px;
+  font-weight: bold;
 }
 
-/* Style the heading */
 h1 {
-  font-size: 36px;
-  color: #9370DB;
-  /* Pearl Purple */
-  font-family: sans-serif;
-  /* Fancy font */
-  margin-bottom: 20px;
+  font-size: 45px;
+  color: #e21e38;
+  margin-bottom: 35px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #3b3b3b;
+   font-family: 'optima', sans-serif;
 }
 
-/* Style the warning message */
 .warning {
   font-weight: bold;
   color: #FF0000;
-  /* Red */
 }
 
 .button-container {
   display: flex;
   justify-content: center;
-  /* Center-align items horizontally */
   gap: 10px;
   margin-bottom: 10px;
   text-align: center;
-  /* Center-align text within buttons */
 }
 
 #clearButton {
-  padding: 10px 20px;
+  padding: 14px 18px;
   background-color: #007bff;
-  /* Button color */
   color: #fff;
-  /* Text color */
   border: none;
-  border-radius: 4px;
+  border-radius: 18px;
   cursor: pointer;
   text-align: center;
-  /* Center-align text within buttons */
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#copyAndSendButton {
+  padding: 14px 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
 }

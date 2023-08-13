@@ -7,18 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SPAR2U Amount Calculator</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
   <script src="script.js" defer></script>
   <link rel="icon" href="S2UImage.png" type="image/png">
 </head>
 
 <body>
   <div class="wrapper">
-    <h1>SPAR2U Calculator :-)</h1> <!-- Add the heading -->
-    <label for="numberInput">Enter Order Amount:</label>
+    <h1>SPAR2U Calculator :-)</h1>
+    <label for="numberInput">Order Amount</label>
     <input type="number" id="numberInput" name="numberInput">
     <br>
     <br>
-    <label for="selectNumber">Out of Stock Items:</label>
+
+    <label for="selectNumber">Out of Stock Items</label>
     <select id="selectNumber" name="selectNumber">
       <option value="0">0</option>
       <option value="1">1</option>
@@ -33,19 +35,23 @@
       <option value="10">10</option>
     </select>
 
-    <div id="textFieldContainer"></div>
+    <div id="textFieldContainer" readonly></div>
     <p id="reservationFeeOutput"></p>
     <p id="totalOutput"></p>
     <p id="settlementAmountOutput"></p>
     <p id="refundAmountOutput"></p>
     <p id="warningMessage" class="warning"></p>
 
+
     <!-- <button id="calculateButton">Calculate</button>
 	<button id="clearButton">Clear</button> -->
-
+    <br>
+    <br>
     <div class="button-container">
+      <button id="copyAndSendButton" disabled>Share</button>
       <button id="calculateButton">Calculate</button>
       <button id="clearButton">Clear</button>
+
 
 
     </div>

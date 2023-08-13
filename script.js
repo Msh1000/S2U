@@ -7,6 +7,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var clearButton = document.getElementById("clearButton");
   clearButton.addEventListener("click", refreshPage);
+
+  var copyAndSendButton = document.getElementById("copyAndSendButton");
+  copyAndSendButton.addEventListener("click", copyAndSendOutput);
+
+  var outputContainer = document.getElementById("textFieldContainer"); // Replace with the ID of your output container
+  var warningMessage = document.getElementById("warningMessage"); // Replace with the ID of your warning message
+
+  // Check if output is available and enable the button
+  if (outputContainer.textContent.trim() !== "" && warningMessage.textContent.trim() === "") {
+    copyAndSendButton.removeAttribute("disabled");
+  }
 });
 
 function calculate() {
@@ -25,13 +36,13 @@ function calculate() {
     var numberFields = textFieldContainer.querySelectorAll("input[type='number']");
     var sumOfNumberFields = 0;
 
-  var allFieldsValid = true;
+    var allFieldsValid = true;
 
     for (var i = 0; i < numberFields.length; i++) {
-        var fieldValue = parseFloat(numberFields[i].value);
-        if (!isNaN(fieldValue)) {
-            sumOfNumberFields += fieldValue;
-        }
+      var fieldValue = parseFloat(numberFields[i].value);
+      if (!isNaN(fieldValue)) {
+        sumOfNumberFields += fieldValue;
+      }
     }
 
     if (allFieldsValid) {
@@ -44,12 +55,13 @@ function calculate() {
       settlementAmountOutput.textContent = "Settlement Amount: R " + settlementAmount.toFixed(2);
       refundAmountOutput.textContent = "Refund Amount: R " + refundAmount.toFixed(2);
 
-
+      var copyAndSendButton = document.getElementById("copyAndSendButton");
+      copyAndSendButton.removeAttribute("disabled");
 
       if (total < 0 || settlementAmount < 0 || refundAmount < 0) {
         var warningMessage = document.getElementById("warningMessage");
         warningMessage.textContent = "Warning! Amounts do not balance!";
-        alert("Warning! Amounts do not balance!."); // Display a pop-up alert
+        alert("Warning! Amounts do not balance!"); // Display a pop-up alert
       } else {
         var warningMessage = document.getElementById("warningMessage");
         warningMessage.textContent = ""; // Clear warning message
@@ -62,6 +74,8 @@ function calculate() {
       refundAmountOutput.textContent = "";
       var warningMessage = document.getElementById("warningMessage");
       warningMessage.textContent = ""; // Clear warning message
+      var copyAndSendButton = document.getElementById("copyAndSendButton");
+      copyAndSendButton.setAttribute("disabled", "true");
     }
   } else {
     reservationFeeOutput.textContent = "Please enter a valid number and fill all fields!";
@@ -70,6 +84,8 @@ function calculate() {
     refundAmountOutput.textContent = "";
     var warningMessage = document.getElementById("warningMessage");
     warningMessage.textContent = ""; // Clear warning message
+    var copyAndSendButton = document.getElementById("copyAndSendButton");
+    copyAndSendButton.setAttribute("disabled", "true");
 
   }
 }
@@ -85,7 +101,8 @@ function generateFields() {
     var numberField = document.createElement("input");
     numberField.type = "number"; // Change to number input type
     numberField.name = "number" + i;
-    numberField.placeholder = "OOS Item Amount: " + (i + 1);
+    numberField.placeholder = "Amount: " + (i + 1);
+    numberField.classList.add("custom-number-input");
     textFieldContainer.appendChild(numberField);
   }
 
@@ -93,10 +110,45 @@ function generateFields() {
 }
 
 function refreshPage() {
-    location.reload(); // Reload the page
+  location.reload(); // Reload the page
 }
 
- /**function clear() {
+
+function copyAndSendOutput() {
+    var totalOrderAmount = document.getElementById("totalOutput").textContent;
+    var settlementAmount = document.getElementById("settlementAmountOutput").textContent;
+    var refundAmount = document.getElementById("refundAmountOutput").textContent;
+
+    var outputText = totalOrderAmount + "\n\n" + settlementAmount + "\n\n" + refundAmount;
+
+    // Create a temporary textarea and set its value
+    var tempTextArea = document.createElement("textarea");
+    tempTextArea.value = outputText;
+
+    // Append the textarea to the DOM
+    document.body.appendChild(tempTextArea);
+
+    // Select the text in the textarea
+    tempTextArea.select();
+
+    try {
+        // Copy the selected text to the clipboard
+        document.execCommand("copy");
+        alert("Output copied to clipboard!");
+    } catch (err) {
+        console.error("Copy to clipboard failed:", err);
+    }
+
+    // Remove the temporary textarea
+    document.body.removeChild(tempTextArea);
+
+  // Open email client with copied content
+  var emailBody = encodeURIComponent("Hi TJ,\n \nPlease assist with the below SPAR2U refund query:\n\nStore -  \n\nOrder Number - \n\n" + outputText);
+  var emailLink = "mailto:support@switch.tj?subject=SPAR2U Refund Query ||&body=" + emailBody;
+  window.location.href = emailLink;
+}
+
+/**function clear() {
   var numberInput = document.getElementById("numberInput");
   var reservationFeeOutput = document.getElementById("reservationFeeOutput");
   var totalOutput = document.getElementById("totalOutput");
