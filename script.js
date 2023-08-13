@@ -134,16 +134,16 @@ function copyAndSendOutput() {
     try {
         // Copy the selected text to the clipboard
         document.execCommand("copy");
-        alert("Output copied to clipboard!");
+        alert("Amounts shared via email!");
     } catch (err) {
-        console.error("Copy to clipboard failed:", err);
+        console.error("Sharing via email failed:", err);
     }
 
     // Remove the temporary textarea
     document.body.removeChild(tempTextArea);
 
   // Open email client with copied content
-  var emailBody = encodeURIComponent("Hi TJ,\n \nPlease assist with the below SPAR2U refund query:\n\nStore -  \n\nOrder Number - \n\n" + outputText);
+  var emailBody = encodeURIComponent("Hi TJ,\n \nPlease assist with the below SPAR2U refund query:\n\nStore -  \n\nOrder Number - \n\n" + outputText + "\n\nKind Regards,");
   var emailLink = "mailto:support@switch.tj?subject=SPAR2U Refund Query ||&body=" + emailBody;
   window.location.href = emailLink;
 }
