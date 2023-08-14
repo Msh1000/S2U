@@ -1,119 +1,201 @@
-body {
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(to right, #B7E1B7, #90c03d);
-}
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+    
+    body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+	 background: linear-gradient(to right, #83a4d4, #b6fbff);
+    }
+/* 
+  .container {
+    min-width: 250px;
+  } */
 
-span {
-  color: red;
-}
+  .box {
+    width: 600px;
+    background: #fafafa;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 2px 2px 20px 5px rgba(0,0,0,0.5); 
+   min-height: 450px; /* Set a fixed starting height */
+    padding: 20px; /* Add some padding for better spacing */
+    box-sizing: border-box;  
+  }
 
-.wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 40px;
-  width: 60%;
-  background: black;
-  border-radius: 30px;
-  box-shadow: #0b8d26 0px 12px 20px -10px;
-  text-align: center;
-}
+  .warning {
+    font-weight: bold;
+    color: #FF0000;
+  }
 
-/* Improved styles for labels */
-label {
-  display: block;
-  margin-bottom: 5px;
-  color: #fff;
-  font-size: 18.5px;
-  font-weight: bold;
-}
-
-#numberInput {
-  padding: 10px;
-  /* Adjust padding */
-  margin: 3px 0;
-  /* Adjust margins */
-  border: 0.5px solid #141818;
-  /* Adjust border thickness */
-  border-radius: 15px;
-  color: #FFFFFF;
-  font-size: 15px;
-  text-align: center;
-  font-weight: bold;
-  background-color: #3b3b3b;
-  /* Add more styles as needed */
-}
-
-/* Improved styles for input fields */
-/* Styles for the dynamically generated number input fields */
-.custom-number-input {
-  /* Add your custom styles here */
+  p {
   margin: 5px;
-  padding: 8px;
+  color: #4D4DFF;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+
+}
+  h1 { 
+  color: #9370DB;
+  /* Pearl Purple */
+ font-family: "Nunito", sans-serif;
+  /* Fancy font */
+  margin-bottom: 10px;
+  padding: 20px 0;
+  font-weight: bold;
+  text-align: center;
+  font-size: 40px;
+  }
+
+
+  .custom-number-input {
+  margin: 5px;
+  padding: 6px;
   border: 2px solid #141818;
   border-radius: 15px;
-  color: #FFFFFF;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-  /* Add shadow */
   font-weight: bold;
-  text-align: center;
-  font-size: 14px;
-  background-color: #3b3b3b;
-}
-
-/* Improved styles for dropdown select */
-select {
-  padding: 10px;
-  /* Adjust padding */
-  margin: 3px 0;
-  /* Adjust margins */
-  border: 0.5px solid #141818;
-  /* Adjust border thickness */
-  border-radius: 15px;
-  color: #FFFFFF;
-  font-size: 14px;
-  font-weight: bold;
-  background-color: #3b3b3b;
-}
-
-/* Existing styles for other elements */
-p {
-  margin: 5px;
-  color: #00BFFF;
   text-align: center;
   font-size: 17px;
-  padding: 3px;
-}
-
-#calculateButton {
-  padding: 14px 20px;
-  background-color: #007bff;
-  color: #fff;
+  outline: none;
   border: none;
-  border-radius: 14px;
-  cursor: pointer;
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
+  border-bottom: 1px solid #4f7df9;
+  font-family: "Nunito", sans-serif;
+  width: 30%;
 }
 
-h1 {
-  font-size: 45px;
-  color: #e21e38;
-  margin-bottom: 35px;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px #3b3b3b;
-   font-family: 'optima', sans-serif;
+.custom-number-input::placeholder {
+    color: black;
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
 }
 
-.warning {
-  font-weight: bold;
-  color: #FF0000;
-}
 
-.button-container {
+
+   select {
+    font-size: 15px; 
+    padding: 10px;   
+    outline: none;
+        border: none;
+        border-bottom: 1px solid #4f7df9;
+        font-family: "Nunito", sans-serif;
+        height: 40%; 
+        border-radius: 12px;
+  }
+
+    
+    .content {
+        padding: 0 30px;
+        
+    }
+    
+    .input {
+        background: #fff;
+        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        padding: 20px 0;
+        margin-bottom: 20px;
+    }
+
+    
+    .input label {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 20px;
+    }
+
+      
+    .input input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #4f7df9;
+        
+        text-align: center;
+        font-size: 20px;
+        height: 35px;    /* Set a fixed height for the input box */
+        font-family: "Nunito", sans-serif;
+          border-radius: 12px;
+    }
+
+
+
+    
+    .inputW {
+        background: #fff;
+        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        padding: 10px 0;
+        margin-bottom: 20px;
+        width: 50%;
+        height: 110px; 
+
+    }
+
+
+    .inputW label {
+        display: block;
+        font-size: 17px;
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 20px;
+    }
+   .inputW input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #4f7df9;
+      
+        text-align: center;
+        font-size: 28px;
+        font-family: "Nunito", sans-serif;
+        border-radius: 12px;
+    }
+
+    .inputH {
+        background: #fff;
+        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        padding: 10px 0;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        width: 50%;
+        width: 50%;
+        height: 110px; 
+
+    }
+
+
+    .inputH label {
+        display: block;
+        font-size: 17px;
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 20px;
+    }
+   .inputH input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #4f7df9;
+        padding: 10px;  
+        text-align: center;
+        font-size: 18px;
+        font-family: "Nunito", sans-serif;
+        width: 60%;
+        height: 40%; 
+        border-radius: 12px;
+    }
+
+   .button-container {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -143,4 +225,72 @@ h1 {
   text-align: center;
   font-size: 14px;
   font-weight: bold;
+}
+
+#calculateButton {
+  cursor: pointer;
+    color: #fff;
+    background-color: #007bff;
+    font-size: 16px;
+    border-radius: 14px;
+    padding: 12px 0;
+    width: 100%;
+    outline: none;
+    border: none;
+    transition: all 0.5s;
+    font-weight: bold;
+}
+button.calculate {
+    cursor: pointer;
+    font-family: "Nunito", sans-serif;
+    color: #fff;
+    background: rgb(97,138,254,1);
+    font-size: 16px;
+    border-radius: 7px;
+    padding: 12px 0;
+    width: 100%;
+    outline: none;
+    border: none;
+    transition: all 0.5s;
+  }
+  button.calculate:hover {
+    background: #0044ff;
+  }
+
+  
+  
+.result {
+    padding: 10px 20px;
+  }
+  .result p {
+    font-weight: 600;
+    font-size: 22px;
+    color: #000;
+    margin-bottom: 15px;
+  }
+  .result #result {
+    font-size: 36px;
+    font-weight: 900;
+    color: #4f7df9;
+    background-color: #eaeaea;
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 55px;
+    margin-bottom: 25px;
+  }
+
+.containerHW {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+  
+
+
+
+
+
+
+
+
 }

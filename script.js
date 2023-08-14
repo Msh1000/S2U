@@ -1,18 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
-  var calculateButton = document.getElementById("calculateButton");
+  var calculateButton = document.getElementById("calculateButton"); //same
   calculateButton.addEventListener("click", calculate);
 
-  var selectNumber = document.getElementById("selectNumber");
+  var selectNumber = document.getElementById("weight"); //same id is weight
   selectNumber.addEventListener("change", generateFields);
 
-  var clearButton = document.getElementById("clearButton");
+  var clearButton = document.getElementById("clearButton"); //same
   clearButton.addEventListener("click", refreshPage);
 
-  var copyAndSendButton = document.getElementById("copyAndSendButton");
+  var copyAndSendButton = document.getElementById("copyAndSendButton"); //same
   copyAndSendButton.addEventListener("click", copyAndSendOutput);
 
   var outputContainer = document.getElementById("textFieldContainer"); // Replace with the ID of your output container
   var warningMessage = document.getElementById("warningMessage"); // Replace with the ID of your warning message
+  
 
   // Check if output is available and enable the button
   if (outputContainer.textContent.trim() !== "" && warningMessage.textContent.trim() === "") {
@@ -20,12 +21,16 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
+
 function calculate() {
   var numberInput = document.getElementById("numberInput");
   var reservationFeeOutput = document.getElementById("reservationFeeOutput");
   var totalOutput = document.getElementById("totalOutput");
   var settlementAmountOutput = document.getElementById("settlementAmountOutput");
   var refundAmountOutput = document.getElementById("refundAmountOutput");
+  var height = document.getElementById("height");
+
+  var orderNumber = height.value;
 
   var inputValue = parseFloat(numberInput.value);
   if (!isNaN(inputValue)) {
@@ -50,6 +55,7 @@ function calculate() {
       var settlementAmount = inputValue - sumOfNumberFields;
       var refundAmount = sumOfNumberFields + reservationFee;
 
+      orderNumberOutput.textContent = "Order Number: #" + orderNumber;
       reservationFeeOutput.textContent = "Reservation Fee: R " + reservationFee.toFixed(2);
       totalOutput.textContent = "Total Order Amount: R " + total.toFixed(2);
       settlementAmountOutput.textContent = "Settlement Amount: R " + settlementAmount.toFixed(2);
@@ -68,7 +74,6 @@ function calculate() {
       }
 
     } else {
-      reservationFeeOutput.textContent = "Please enter a valid number and fill all fields.";
       totalOutput.textContent = "";
       settlementAmountOutput.textContent = "";
       refundAmountOutput.textContent = "";
@@ -91,7 +96,7 @@ function calculate() {
 }
 
 function generateFields() {
-  var selectNumber = document.getElementById("selectNumber");
+  var selectNumber = document.getElementById("weight");
   var textFieldContainer = document.getElementById("textFieldContainer");
 
   var selectedNumber = parseInt(selectNumber.value);
@@ -118,8 +123,10 @@ function copyAndSendOutput() {
     var totalOrderAmount = document.getElementById("totalOutput").textContent;
     var settlementAmount = document.getElementById("settlementAmountOutput").textContent;
     var refundAmount = document.getElementById("refundAmountOutput").textContent;
+    var orderNumberOutput = document.getElementById("height");
 
-    var outputText = totalOrderAmount + "\n\n" + settlementAmount + "\n\n" + refundAmount;
+
+    var outputText = orderNumberOutput + "\n\n" + totalOrderAmount + "\n\n" + settlementAmount + "\n\n" + refundAmount;
 
     // Create a temporary textarea and set its value
     var tempTextArea = document.createElement("textarea");
@@ -143,10 +150,11 @@ function copyAndSendOutput() {
     document.body.removeChild(tempTextArea);
 
   // Open email client with copied content
-  var emailBody = encodeURIComponent("Hi TJ,\n \nPlease assist with the below SPAR2U refund query:\n\nStore -  \n\nOrder Number - \n\n" + outputText + "\n\nKind Regards,");
-  var emailLink = "mailto:support@switch.tj?subject=SPAR2U Refund Query ||&body=" + emailBody;
+  var emailBody = encodeURIComponent("Hi TJ,\n \nPlease assist with the below SPAR2U refund query:\n\nStore -\n\n" + outputText + "\n\nKind Regards,");
+  var emailLink = "mailto:support@switch.tj?subject=SPAR2U Refund Query #"+orderNumberOutput + "||&body=" + emailBody;
   window.location.href = emailLink;
 }
+
 
 /**function clear() {
   var numberInput = document.getElementById("numberInput");
