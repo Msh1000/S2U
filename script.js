@@ -14,6 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
   var outputContainer = document.getElementById("textFieldContainer"); // Replace with the ID of your output container
   var warningMessage = document.getElementById("warningMessage"); // Replace with the ID of your warning message
   
+  var popupClose = document.getElementById("popupClose");
+  popupClose.addEventListener("click", function() {
+      var popupContainer = document.getElementById("popupContainer");
+      popupContainer.style.display = "none";
+    });
 
   // Check if output is available and enable the button
   if (outputContainer.textContent.trim() !== "" && warningMessage.textContent.trim() === "") {
@@ -61,13 +66,40 @@ function calculate() {
       settlementAmountOutput.textContent = "Settlement Amount: R " + settlementAmount.toFixed(2);
       refundAmountOutput.textContent = "Refund Amount: R " + refundAmount.toFixed(2);
 
+     /** var popupContainer = document.getElementById("popupContainer");
+    popupContainer.style.display = "block";
+
+    var popupOutput = document.getElementById("popupOutput");
+    popupOutput.textContent = "Order Number: #" + orderNumber + "\n"
+                              + "Reservation Fee: R " + reservationFee.toFixed(2) + "\n" +
+                              "Total Order Amount: R " + total.toFixed(2) + "\n" +
+                              "Settlement Amount: R " + settlementAmount.toFixed(2) + "\n" +
+                              "Refund Amount: R " + refundAmount.toFixed(2);
+
+   var popupOverlay = document.querySelector(".popup-overlay");
+   popupOverlay.addEventListener("click", closePopup);*/
+                              
+
       var copyAndSendButton = document.getElementById("copyAndSendButton");
       copyAndSendButton.removeAttribute("disabled");
 
       if (total < 0 || settlementAmount < 0 || refundAmount < 0) {
+        /**var warningMessage = document.getElementById("warningMessage");
+        warningMessage.textContent = "Warning! Amounts do not balance!";
+        alert("Warning! Amounts do not balance!"); // Display a pop-up alert*/
+
         var warningMessage = document.getElementById("warningMessage");
         warningMessage.textContent = "Warning! Amounts do not balance!";
-        alert("Warning! Amounts do not balance!"); // Display a pop-up alert
+
+        var popupContainer = document.getElementById("popupContainer");
+        popupContainer.style.display = "block";
+    
+        var popupOutput = document.getElementById("popupOutput");
+        popupOutput.textContent = "Warning! Amounts do not balance!";
+
+        var popupOverlay = document.querySelector(".popup-overlay");
+        popupOverlay.addEventListener("click", closePopup);
+
       } else {
         var warningMessage = document.getElementById("warningMessage");
         warningMessage.textContent = ""; // Clear warning message
@@ -141,7 +173,14 @@ function copyAndSendOutput() {
     try {
         // Copy the selected text to the clipboard
         document.execCommand("copy");
-        alert("Amounts shared via email!");
+        var popupContainer = document.getElementById("popupContainer");
+        popupContainer.style.display = "block";
+    
+        var popupOutput = document.getElementById("popupOutput");
+        popupOutput.textContent = "Amounts have been shared via Email!";
+
+        var popupOverlay = document.querySelector(".popup-overlay");
+        popupOverlay.addEventListener("click", closePopup);
     } catch (err) {
         console.error("Sharing via email failed:", err);
     }
@@ -150,9 +189,18 @@ function copyAndSendOutput() {
     document.body.removeChild(tempTextArea);
 
   // Open email client with copied content
-  var emailBody = encodeURIComponent("Hi TJ,\n \nPlease assist with the below SPAR2U refund query:\n\nStore -\n\n" + outputText + "\n\nKind Regards,");
+  var emailBody = encodeURIComponent("Hi TJ,\n \nPlease assist with the below SPAR2U refund query:\n\nStore -\n\n" + outputText + "\n\n");
   var emailLink = "mailto:support@switch.tj?subject=SPAR2U Refund Query - Order #"+orderNumber + " ||&body=" + emailBody;
   window.location.href = emailLink;
+}
+
+function closePopup() {
+  var popupContainer = document.getElementById("popupContainer");
+  popupContainer.style.display = "none";
+
+  // Remove event listener to prevent multiple bindings
+  var popupOverlay = document.querySelector(".popup-overlay");
+  popupOverlay.removeEventListener("click", closePopup);
 }
 
 
