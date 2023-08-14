@@ -123,10 +123,10 @@ function copyAndSendOutput() {
     var totalOrderAmount = document.getElementById("totalOutput").textContent;
     var settlementAmount = document.getElementById("settlementAmountOutput").textContent;
     var refundAmount = document.getElementById("refundAmountOutput").textContent;
-    var orderNumberOutput = document.getElementById("height");
+    var orderNumber = document.getElementById("height").value; // Get the order number from input
+  
 
-
-    var outputText = orderNumberOutput + "\n\n" + totalOrderAmount + "\n\n" + settlementAmount + "\n\n" + refundAmount;
+    var outputText = "Order Number: #" + orderNumber + "\n\n" + totalOrderAmount + "\n\n" + settlementAmount + "\n\n" + refundAmount;
 
     // Create a temporary textarea and set its value
     var tempTextArea = document.createElement("textarea");
@@ -151,7 +151,7 @@ function copyAndSendOutput() {
 
   // Open email client with copied content
   var emailBody = encodeURIComponent("Hi TJ,\n \nPlease assist with the below SPAR2U refund query:\n\nStore -\n\n" + outputText + "\n\nKind Regards,");
-  var emailLink = "mailto:support@switch.tj?subject=SPAR2U Refund Query #"+orderNumberOutput + "||&body=" + emailBody;
+  var emailLink = "mailto:support@switch.tj?subject=SPAR2U Refund Query - Order #"+orderNumber + " ||&body=" + emailBody;
   window.location.href = emailLink;
 }
 
