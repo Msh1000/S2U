@@ -189,7 +189,7 @@ function copyAndSendOutput() {
     document.body.removeChild(tempTextArea);
 
   // Open email client with copied content
-  var emailBody = encodeURIComponent("Hi TJ,\n \nPlease assist with the below SPAR2U refund query:\n\nStore -\n\n" + outputText + "\n\n");
+  var emailBody = encodeURIComponent("Hi TJ,\n \nPlease advise if the below SPAR2U refund has been processed:\n\nStore -\n\n" + outputText + "\n\n");
   var emailLink = "mailto:support@switch.tj?subject=SPAR2U Refund Query - Order #"+orderNumber + " ||&body=" + emailBody;
   window.location.href = emailLink;
 }
