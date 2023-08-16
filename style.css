@@ -26,7 +26,7 @@
     border-radius: 20px;
     text-align: center;
     box-shadow: 2px 2px 20px 5px rgba(0,0,0,0.5); 
-   min-height: 450px; /* Set a fixed starting height */
+    min-height: 450px; /* Set a fixed starting height */
     padding: 20px; /* Add some padding for better spacing */
     box-sizing: border-box;  
   }
@@ -50,7 +50,7 @@
   /* Pearl Purple */
   font-family: 'Roboto', sans-serif;  /* Fancy font */
   margin-bottom: 10px;
-  padding: 20px 0;
+  padding: 10px 0;
   font-weight: bold;
   text-align: center;
   font-size: 42px;
@@ -106,7 +106,7 @@
         box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
         border-radius: 12px;
         padding: 20px 0;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     
@@ -129,8 +129,122 @@
         font-family: "Nunito", sans-serif;
         border-radius: 12px;
         font-weight: bold;
+        background: f8f8f8;
     }
 
+    .store { 
+        background: #f8f8f8;
+        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        padding: 20px 0;
+        margin-bottom: 15px;
+    }
+
+    .store input{
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #4f7df9;
+      text-align: center;
+      font-size: 17px;
+      height: 35px;    /* Set a fixed height for the input box */
+      font-family: "Nunito", sans-serif;
+      border-radius: 12px;
+      font-weight: bold;
+      min-width: 60%;
+    }
+
+    .store label{
+      display: block;
+      font-size: 18px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 20px;
+    }
+
+    .gender {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      align-content: center;
+      background: #fff;
+      box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+      border-radius: 12px;
+      padding: 13px 0;
+      margin-bottom: 10px;
+      
+  }
+  .text {
+    color: #000; 
+    text-align: center;
+    font-size: 15px;
+    font-family: "Nunito", sans-serif;
+}
+    /* Style for Radio */
+  .gender .container {
+    color: black;
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      /* margin-bottom: 12px; */
+      margin-top: 7px;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    
+    /* Hide the browser's default radio button */
+    .gender .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+    
+    /* Create a custom radio button */
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+      border-radius: 50%;
+    }
+    
+    /* On mouse-over, add a grey background color */
+    .gender .container:hover input ~ .checkmark {
+      background-color: #ccc;
+    }
+    
+    /* When the radio button is checked, add a blue background */
+    .gender .container input:checked ~ .checkmark {
+      background-color: #2196F3;
+    }
+    
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    
+    /* Show the indicator (dot/circle) when checked */
+    .gender .container input:checked ~ .checkmark:after {
+      display: block;
+    }
+    
+    /* Style the indicator (dot/circle) */
+    .gender .container .checkmark:after {
+         top: 9px;
+        left: 9px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+    }
+    /* END Style for Radio */
 
 
     
@@ -209,26 +323,26 @@
 }
 
 #clearButton {
-  padding: 14px 18px;
+  padding: 15px 25px;
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 18px;
   cursor: pointer;
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
 }
 
 #copyAndSendButton {
-  padding: 14px 18px;
+  padding: 15px 25px;
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 18px;
   cursor: pointer;
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -236,34 +350,28 @@
   cursor: pointer;
     color: #fff;
     background-color: #007bff;
-    font-size: 16px;
+    font-size: 17px;
     border-radius: 14px;
-    padding: 12px 0;
+    padding: 15px 0;
     width: 100%;
     outline: none;
     border: none;
     transition: all 0.5s;
     font-weight: bold;
 }
-button.calculate {
-    cursor: pointer;
-    font-family: "Nunito", sans-serif;
-    color: #fff;
-    background: rgb(97,138,254,1);
-    font-size: 16px;
-    border-radius: 7px;
-    padding: 12px 0;
-    width: 100%;
-    outline: none;
-    border: none;
-    transition: all 0.5s;
-  }
-  button.calculate:hover {
-    background: #0044ff;
-  }
 
-  
-  
+.boxOut{
+  display: none; 
+  background: #D8D9DA;
+  box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  padding: 15px 0;
+  width: 80%;
+  max-width: 600px; /* Set the maximum width */
+  margin: 0 auto; /* Center horizontally */
+  height: auto; /* Adjust height as needed */
+}
+ 
 .result {
     padding: 10px 20px;
   }
@@ -277,7 +385,7 @@ button.calculate {
     font-size: 36px;
     font-weight: 900;
     color: #4f7df9;
-    background-color: #eaeaea;
+    background-color:black;
     display: inline-block;
     padding: 7px 20px;
     border-radius: 55px;
