@@ -57,19 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById("warningMessage").textContent = "Fill In Order Amount Field!";
         }
 
-        else{
-        // Update HTML elements with calculated values
-        document.getElementById("orderNumberOutput").textContent = "Order Number: # " + orderNumber;
-        document.getElementById("reservationFeeOutput").textContent = "Reservation Fee: R " + calculatedReservationFee.toFixed(2);
-        document.getElementById("totalOutput").textContent = "Total Order Amount: R " + calculatedTotal.toFixed(2);
-        document.getElementById("settlementAmountOutput").textContent = "Settlement Amount: R " + calculatedSettlementAmount.toFixed(2);
-        document.getElementById("refundAmountOutput").textContent = "Refund Amount: R " + calculatedRefundAmount.toFixed(2);
-        document.getElementById("storeNameOutput").textContent = "Store Name: " + storeName + " " + selectedStore ;
-        document.getElementById("warningMessage").textContent = "";
-        copyAndSendButton.removeAttribute("disabled");
-   }
-
-   if (calculatedTotal < 0 || calculatedSettlementAmount < 0 || calculatedRefundAmount < 0) {
+        else if (calculatedTotal < 0 || calculatedSettlementAmount < 0 || calculatedRefundAmount < 0) {
 
     var warningMessage = document.getElementById("warningMessage");
     warningMessage.textContent = "Warning! Amounts do not balance!";
@@ -83,10 +71,22 @@ document.addEventListener("DOMContentLoaded", function () {
     var popupOverlay = document.querySelector(".popup-overlay");
     popupOverlay.addEventListener("click", closePopup);
 
-  } else {
-    var warningMessage = document.getElementById("warningMessage");
+        } 
+
+    else{
+        // Update HTML elements with calculated values
+        document.getElementById("orderNumberOutput").textContent = "Order Number: # " + orderNumber;
+        document.getElementById("reservationFeeOutput").textContent = "Reservation Fee: R " + calculatedReservationFee.toFixed(2);
+        document.getElementById("totalOutput").textContent = "Total Order Amount: R " + calculatedTotal.toFixed(2);
+        document.getElementById("settlementAmountOutput").textContent = "Settlement Amount: R " + calculatedSettlementAmount.toFixed(2);
+        document.getElementById("refundAmountOutput").textContent = "Refund Amount: R " + calculatedRefundAmount.toFixed(2);
+        document.getElementById("storeNameOutput").textContent = "Store Name: " + storeName + " " + selectedStore ;
+        document.getElementById("warningMessage").textContent = "";
+        copyAndSendButton.removeAttribute("disabled");
+      var warningMessage = document.getElementById("warningMessage");
     warningMessage.textContent = ""; // Clear warning message
-  }
+
+    }
 
 
 }
