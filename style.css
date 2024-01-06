@@ -21,7 +21,7 @@
   } */
 
   .box {
-    width: 600px;
+    width: 550px;
     background: #e7ecef;
     border-radius: 20px;
     text-align: center;
@@ -40,7 +40,7 @@
   margin: 5px;
   color: #168aad;
   text-align: center;
-  font-size: 18px;
+  font-size: 17.3px;
   font-family: "Nunito", sans-serif;
   font-weight: bold;
 
@@ -145,12 +145,12 @@
       border: none;
       border-bottom: 1px solid #4f7df9;
       text-align: center;
-      font-size: 17px;
+      font-size: 16px;
       height: 35px;    /* Set a fixed height for the input box */
       font-family: "Nunito", sans-serif;
       border-radius: 12px;
       font-weight: bold;
-      min-width: 60%;
+      min-width: 70%;
     }
 
     .store label{
@@ -176,7 +176,7 @@
   .text {
     color: #000; 
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
     font-family: "Nunito", sans-serif;
 }
     /* Style for Radio */
@@ -448,4 +448,45 @@
   .popup-content {
       max-width: 90%; /* Adjust maximum width for smaller screens */
   }
+}
+
+#suggestionsDropdown {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9;
+  box-shadow: #000;
+  z-index: 1;
+  list-style-type: none; 
+  padding: 0; 
+      outline: none;
+    border: none;
+    border-bottom: 1px solid #4f7df9;
+    border-radius: 12px;
+    font-weight: bold;
+    max-height: 250px;
+    min-height: 250px; 
+    overflow-y: auto; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    min-width: 300px;
+ 
+        
+}
+
+#suggestionsDropdown li {
+  padding: 8px;
+  cursor: pointer;
+    font-size: 12.5px; 
+    font-weight: bolder;
+    list-style-type: none;
+
+    
+}
+
+#suggestionsDropdown li:hover {
+  background-color: #ddd;
 }

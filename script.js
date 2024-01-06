@@ -11,9 +11,67 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var clearButton = document.getElementById("clearButton"); //same
   clearButton.addEventListener("click", refreshPage);
+
+  var storeNameInput = document.getElementById("textInput");
+  storeNameInput.addEventListener("input", predictiveSearch);
+
+  fetch('storeNames.txt')
+        .then(response => response.text())
+        .then(data => {
+            window.storeNames = data.split('\n').filter(name => name.trim() !== ''); // Load names into the storeNames array
+        })
+        .catch(error => console.error('Error fetching store names:', error));
+
+
+        document.addEventListener("click", function (event) {
+          var suggestionsDropdown = document.getElementById("suggestionsDropdown");
   
+          // Check if the click event target is outside the suggestions dropdown and input field
+          if (!event.target.closest('#suggestionsDropdown') && event.target !== storeNameInput) {
+              suggestionsDropdown.style.display = "none";
+          }
+      });
 
 });
+
+
+function predictiveSearch() {
+  var storeNameInput = document.getElementById("textInput");
+  var suggestionsDropdown = document.getElementById("suggestionsDropdown");
+
+  var searchInput = storeNameInput.value.toLowerCase();
+
+  // Check if storeNames is defined
+  if (!window.storeNames) {
+      suggestionsDropdown.style.display = "none";
+      return;
+  }
+
+  var filteredStores = storeNames.filter(store => store.toLowerCase().includes(searchInput));
+
+  suggestionsDropdown.innerHTML = '';
+
+  if (searchInput.trim() === "") {
+      suggestionsDropdown.style.display = "none";
+      return;
+  }
+
+  filteredStores.forEach(store => {
+      var listItem = document.createElement("li");
+      listItem.textContent = store;
+      listItem.onclick = function () {
+          storeNameInput.value = store;
+          suggestionsDropdown.style.display = "none";
+      };
+      suggestionsDropdown.appendChild(listItem);
+  });
+
+  if (filteredStores.length > 0) {
+      suggestionsDropdown.style.display = "block";
+  } else {
+      suggestionsDropdown.style.display = "none";
+  }
+}
 
 
   // Function to run when the Calculate button is clicked
@@ -80,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("totalOutput").textContent = "Total Order Amount: R " + calculatedTotal.toFixed(2);
         document.getElementById("settlementAmountOutput").textContent = "Settlement Amount: R " + calculatedSettlementAmount.toFixed(2);
         document.getElementById("refundAmountOutput").textContent = "Refund Amount: R " + calculatedRefundAmount.toFixed(2);
-        document.getElementById("storeNameOutput").textContent = "Store Name: " + storeName + " " + selectedStore ;
+        document.getElementById("storeNameOutput").textContent = "Store Name: " + storeName ;
         document.getElementById("warningMessage").textContent = "";
         copyAndSendButton.removeAttribute("disabled");
       var warningMessage = document.getElementById("warningMessage");
@@ -123,18 +181,29 @@ document.addEventListener("DOMContentLoaded", function () {
     var storeName = document.getElementById("textInput").value;
 
     // Get selected radio button value
-    let selectedStore = "";
+var selectedStore ="";
+
+ var orderStatus = "";
     const radioButtons = document.getElementsByName("radio");
     for (const radioButton of radioButtons) {
         if (radioButton.checked) {
-            selectedStore = radioButton.nextSibling.textContent;
+          orderStatus = radioButton.nextSibling.textContent;
             break;
         }
     }
 
+    if (orderStatus === "Order Delivered") {
+      
+      console.log("Order is in status D. Performing action 1.");
+      var outputText = "Store Name: " + storeName  + "\n\nOrder Number: #" + orderNumber + "\n\n" + totalOrderAmount + "\n\n" + settlementAmount + "\n\n" + refundAmount;
+      var keyWord = "refund";
+    } else {
+     
+      console.log("Order is not in status D. Performing action 2.");
+      var outputText = "Store Name: " + storeName  + "\n\nOrder Number: #" + orderNumber + "\n\n" + totalOrderAmount;
+      var keyWord = "reversal";
+    }
   
-
-    var outputText = "Store Name: " + storeName + " " + selectedStore + "\n\nOrder Number: #" + orderNumber + "\n\n" + totalOrderAmount + "\n\n" + settlementAmount + "\n\n" + refundAmount;
 
     var tempTextArea = document.createElement("textarea");
     tempTextArea.value = outputText;
@@ -162,8 +231,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.removeChild(tempTextArea);
 
   // Open email 
-  var emailBody = encodeURIComponent("Hi TJ,\n \nPlease advise if the below SPAR2U refund has been processed:\n\n" + outputText + "\n\n");
-  var emailLink = "mailto:support@switch.tj?subject=SPAR2U Refund Query - Order #"+orderNumber + " || " + storeName + " " + selectedStore + "&body=" + emailBody;
+  var emailBody = encodeURIComponent("Hi TJ,\n \nPlease advise if the below SPAR2U" + " " + keyWord + " " + "has been processed:\n\n" + outputText + "\n\n");
+  var ccEmails = 'dhashen.govender@spar.co.za; Mohammed.Haroun@spar.co.za';
+  var emailLink = "mailto:support@switch.tj?subject=SPAR2U Refund Query - Order #"+orderNumber + " || " + storeName + " " + selectedStore + "&body=" + emailBody + "&cc=" + ccEmails;
   window.location.href = emailLink;
 }
 
