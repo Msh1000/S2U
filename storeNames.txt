@@ -333,6 +333,7 @@ TOPS Malalane
 SUPERSPAR Spargs Ngcobo
 TOPS SPARGS Ngcobo
 SUPERSPAR Brackenfell
+SUPERSPAR Brackengate
 TOPS Brackenfell
 Avonmore SUPERSPAR
 Avonmore TOPS
@@ -411,11 +412,11 @@ Southgate TOPS
 SPARGS Kei SUPERSPAR
 SPARGS Kei TOPS
 Umkomaas TOPS
-UmkomaasSUPERSPAR
+Umkomaas SUPERSPAR
 Underburg TOPS
-UnderburgSUPERSPAR
+Underburg SUPERSPAR
 Winkle TOPS
-WinkleSUPERSPAR
+Winkle SUPERSPAR
 Yellowood SUPERSPAR
 Yellowood TOPS
 Kwa Mashu SUPERSPAR
