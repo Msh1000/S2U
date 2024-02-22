@@ -517,3 +517,5 @@ St. Helena Bay TOPS
 Ceres SUPARSPAR
 Ceres TOPS
 Vangate SPAR
+TOPS Kasselsvlei
+SPAR Kasselsvlei
