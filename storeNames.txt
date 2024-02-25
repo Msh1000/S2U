@@ -519,3 +519,4 @@ Ceres TOPS
 Vangate SPAR
 TOPS Kasselsvlei
 SPAR Kasselsvlei
+SUPERSPAR Westpark
