@@ -25,8 +25,8 @@ SUPERSPAR Fontana The Zone Rosebank
 TOPS Fontana The Zone Rosebank
 SPAR Bedfordview
 TOPS Bedfordview
-KWIKSPAR Linden
 TOPS Linden
+KWIKSPAR Linden
 SUPERSPAR Polofields
 SUPERSPAR The Market Kenilworth
 TOPS Kenilworth Market
@@ -273,8 +273,8 @@ TOPS Northcrest
 TOPS Protea
 SUPERSPAR Rosehill
 TOPS Rosehill
-KWIKSPAR Kloof
-TOPS Kloof
+KWIKSPAR On Kloof
+TOPS On Kloof
 SPAR Sonstraal
 TOPS Sonstraal
 SUPERSPAR Heather Park
@@ -333,7 +333,6 @@ TOPS Malalane
 SUPERSPAR Spargs Ngcobo
 TOPS SPARGS Ngcobo
 SUPERSPAR Brackenfell
-SUPERSPAR Brackengate
 TOPS Brackenfell
 Avonmore SUPERSPAR
 Avonmore TOPS
@@ -346,121 +345,162 @@ Paarl East Tops
 SPAR Burt Drive
 Tops Burt drive
 Melkbos TOPS
-Kilner Park SUPERSPAR
-Kilner Park TOPS
-Blue Valley SPAR
-Blue Valley TOPS
-Willow Way SUPERSPAR
-Willow Way TOPS
+KWIKSPAR Erasmia
+SPAR Naboom
+TOPS Naboon
+Parys SPAR
+SUPERSPAR Thornhill
+TOPS Thornhill
+Belfast SPAR
+Belfast TOPS
+SPAR Century Village
+TOPS Century Village
+SUPERSPAR Nicks Food EL
+TOPS Nicks Food EL
+SPAR Sunningdale
+TOPS Sunningdale
+SPAR Newrest SPARGS
+TOPS Newrest SPARGS
+Hibberdene SUPERSPAR
+UmkomaasSUPERSPAR
+SUPERSPAR Retail Crossing
+SUPERSPAR TAMS
+TOPS TAMS
+Parys TOPS
+KWIKSPAR Panorama
+TOPS Panorama
+SUPERSPAR West Park
 SPAR Thabazimbi
 TOPS Thabazimbi
-Mokopane SPAR
-Mokopane TOPS
-The Reeds SPAR
-The Reeds TOPS
 Glenwood SUPERSPAR
 Glenwood TOPS
-Hillcrest KWIKSPAR
-Hillcrest TOPS
-Thistle TOPS
+Fairlands SPAR
+Umkomaas TOPS
 Abaqulusi SUPERSPAR
 Abaqulusi TOPS
-Holdens KWIKSPAR
-Holdens TOPS
-Northbeach SPAR
-Northbeach TOPS
-Piet Retief SUPERSPAR
-Piet Retief TOPS
-Ramsgate SPAR
-Ramsgate TOPS
-Riverside SPAR
-Riverside TOPS
-Rolyats SUPERSPAR
-Rolyats TOPS
-Savoy SUPERSPAR
-Savoy TOPS
-Waterloo SUPERSPAR
-WaterlooTOPS
-Abington SPAR
-Abington TOPS
-Escourt SPAR
-Escourt TOPS
-Eshowe SUPERSPAR
-Eshowe TOPS
-Harbourview SUPERSPAR
-Harbourview TOPS
-Hibberdene SUPERSPAR
+SPAR Kasselsvlei
+TOPS Kasselsvlei
 Hibberdene TOPS
-Lakeside SUPERSPAR
-Lakeside TOPS
-Mtunzini SPAR
-Mtunzini TOPS
-Nottingham Road SPAR
-Nottingham Road TOPS
-Queensmead SUPERSPAR
-Queensmead TOPS
-Shelly Beach SUPERSPAR
-Shelly Beach TOPS
-Southgate SUPERSPAR
-Southgate TOPS
-Marina KWIKSPAR
-Marina TOPS
-Salta SUPERSPAR
-Salta TOPS
-Southgate SUPERSPAR
-Southgate TOPS
-SPARGS Kei SUPERSPAR
-SPARGS Kei TOPS
-Umkomaas TOPS
-Umkomaas SUPERSPAR
-Underburg TOPS
-Underburg SUPERSPAR
-Winkle TOPS
-Winkle SUPERSPAR
-Yellowood SUPERSPAR
-Yellowood TOPS
-Kwa Mashu SUPERSPAR
+Houtbay SPAR
+Houtbay TOPS
+SUPERSPAR Kopanong
+TOPS Kopanong
+TOPS West Park
+SPAR Noordwyk
+TOPS Noordwyk
+The Reeds SPAR
+The Reeds TOPS
 Bel Air SUPERSPAR
 Bel Air TOPS
 Blackheath SUPERSPAR
 Blackheath TOPS
-Fourway SPAR
-Fourway TOPS
-Aljo's SPAR
-Aljo's TOPS
-Empire
-Empire TOPS
-Retail Crossing SPAR
-Retail Crossing TOPS
-Hobart
-Hobart TOPS
-Bassonia SPAR
-Constantia SPAR
-Constantia TOPS
-Dericks KWIKSPAR
-Dericks TOPS
-Diepkloof SUPERSPAR
-Fairlands SPAR
-Fairlands SPAR
-Geelhout SPAR
-Meditas SPAR
-Meditas TOPS 
+SUPERSPAR Brackengate
+TOPS Retail Crossing
+Langebaan SPAR
+Langebaan TOPS
+Riversdal SUPERSPAR
+Riversdal TOPS
+TOPS Nicks Food KWT
+Menlyn Maine SUPERSPAR
+Menlyn Maine TOPS
 Olivedale SUPERSPAR
 Olivedale TOPS
-Onn Smits TOPS
-SPAR Randfontein
-TOPS Randfontein
-SPAR 2nd Avenue
-TOPS 2nd Avenue
-SPAR Five Star
-TOPS Five Star
-Parys SPAR
-Parys TOPS
+Kwantu SPAR
+Kwantu TOPS
+Geelhout 
+Clayville Superspar (Mall of Tembisa)
+Clayville TOPS (Mall of Tembisa)
+SPAR Eyethu ( DC Staff Shop)
+Randfontein 
+Randfontein Tops
+Stilbaai SPAR
+Stilbaai TOPS
+Mini Market
+Mini Market Tops
+SUPERSPAR Swellendam
+TOPS Swellendam
+Constantia SPAR
+Constantia TOPS
+Heidelberg SPAR
+Heidelberg TOPS
+Springbok SUPERSPAR
+Springbok TOPS
+Mokopane SPAR
+Mokopane TOPS
+Mams Mall SUPERSPAR
+Mams Mall TOPS
+Kismet SPAR
+Randjies Park SPAR
+Randjies Park TOPS
+Kilner park SUPERSPAR
+Kilner park TOPS
+Shoshanguave Crossing SPAR
+Shoshanguave Crossing TOPS
+R71 TOPS
+Danville SPAR (Columbo)
+Danville TOPS (Columbo)
+Renbro SUPERSPAR
+Renbro TOPS
+Jubilee SUPERSPAR
+Jubilee TOPS
+Tzaneen SUPERSPAR
+Tzaneen TOPS
+Bronco SUPERSPAR
+Bronco TOPS
+Aqua  SUPERSPAR
+Aqua  TOPS
+Sable Hills KWIKSPAR
+Sable Hills TOPS
+The Reeds SPAR
+The Reeds TOPS
+Ridge KWIKSPAR
+Ridge KWIKSPAR
+Goldengate SPAR
+Goldengate TOPS
+Waterloo SUPERSPAR
+WaterlooTOPS
+Mt Edgecombe KWIKSPAR
+Mt Edgecombe TOPS
+Mtunzini SPAR
+Mtunzini TOPS
+Eshowe SUPERSPAR
+Eshowe TOPS
+Ushaka KWIKSPAR
+Ushaka TOPS
+Winkle TOPS
+Winkle SUPERSPAR
+Yellowood SUPERSPAR
+Yellowood TOPS
+Savoy SPAR
+Savoy TOPS
+Hattons SPAR
+Hattons SPAR
+Manaba SPAR
+Manaba TOPS
+Midrand SUPERSPAR
+Midrand TOPS
+Hobart
+Hobart TOPS
+Super A Norwood SPAR
+Super A Norwood TOPS
 Riverview
-Vyfhoek SPAR
-Vyfhoek SPAR
-Belfast SPAR
-Belfast TOPS
+The Falls
+The Falls Tops
+Dericks KWIKSPAR
+Dericks TOPS
+Empire
+Empire TOPS
+Meditas Spar
+Meditas Tops 
+Vyfhoek
+Vyfhoek TOPS
+Fairlands TOPS
+Fivestar Superspar 
+Fivestar Tops 
+Fourway
+Fourway TOPS
+Aljos Spar
+Aljos Tops
 SPAR Orchards
 Machado SaveMor 
 Machado TOPS 
@@ -472,51 +512,50 @@ Komati SUPERSPAR
 Komati TOPS 
 Sonpark SPAR
 Sonpark TOPS
-Dhaysons KWIKSPAR
-Dhaysons TOPS
-Despatch SPAR
-Despatch TOPS 
-Aspen SPAR 
-Aspen TOPS 
-Dagbreek SPAR
-Dagbreek TOPS 
-Linton Grange TOPS 
-Linton GrangeSPAR
-Melvilles SUPERSPAR 
-Melvilles TOPS 
-Oak Cottage SPAR 
-Oak Cottage TOPS 
-SPAR Kwanty
-TOPS Kwantu
-BWB SUPERSPAR 
-BWB TOPS 
-Sedgefield SUPERSPAR 
-Sedgefield TOPS 
-Abbotsford SPAR 
-Abbotsford TOPS
+Matsulu SPAR
+Matsulu TOPS
+Moratiwa SUPERSPAR
+Moratiwa TOPS
+TOPS De Hallen
+KWIKSPAR Nel Acres
+KWIKSPAR Dhaysons 
+TOPS Dhaysons 
+Despatch SUPERSPAR
+Despatch TOPS
+SUPERSPAR Mount Pleasant
+TOPS Mount Pleasant
+SUPERSPAR Aspen
+TOPS Aspen
+SUPERSPAR ENGCOBO
+TOPS ENGCOBO
+SUPERSPAR Hunters
+TOPS Hunters
+SUPERSPAR Bluewater Bay
+TOPS Bluewater Bay
+Nicks Food KWT SPAR
+Aliwal North SPAR
+Aliwal North TOPS
+Nick`s Food Berlin SPAR
+Nick`s Food Berlin SPAR
+SPAR Boston
+TOPS Boston
+SPAR St Helena
+TOPS St Helena
+SUPERSPAR Laaiplek
+TOPS Laaiplek
+SPAR De Dekke
+TOPS De Dekke
+Robertson Spar
+Robertson TOPS
+Kalahari SUPERSPAR
+Kalahari TOPS
+Van Riebeekshof Spar
+Van Riebeekshof TOPS
+Aurora SPAR
+Aurora TOPS
+Vangate SPAR
 Royal Ascot SUPERSPAR
 Royal Ascot TOPS
-Van Riebeekshof SPAR
-Van Riebeekshof TOPS
-Woodstock Quater SPAR
-Woodstock Quater TOPS
-Houtbay SPAR
-Houtbay TOPS
-Pinelands KWIKSPAR
-Pinelands TOPS
-Langebaan SPAR
-Langebaan TOPS
-Heidelberg SPAR
-Heidelberg TOPS
-Riversdal SUPERSPAR
-Riversdal TOPS
-Springbok SUPERSPAR
-Springbok TOPS
-St. Helena Bay SPAR
-St. Helena Bay TOPS
-Ceres SUPARSPAR
-Ceres TOPS
-Vangate SPAR
-TOPS Kasselsvlei
-SPAR Kasselsvlei
-SUPERSPAR Westpark
+SPAR Weltevreden
+SPAR Oudtshoorn
+TOPS Oudtshoorn
