@@ -107,15 +107,19 @@
         border-radius: 12px;
         padding: 20px 0;
         margin-bottom: 15px;
+        margin-top: 14px;
+        width: 100%;
+        text-align: center;
     }
 
     
     .input label {
         display: block;
-        font-size: 18px;
-        font-weight: 600;
+        font-size: 16.5px;
+        font-weight: 550;
         color: #000;
         margin-bottom: 20px;
+       
     }
 
       
@@ -124,12 +128,13 @@
         border: none;
         border-bottom: 1px solid #4f7df9;
         text-align: center;
-        font-size: 18px;
-        height: 35px;    /* Set a fixed height for the input box */
+        font-size: 17px;
+        height: 35px;    
         font-family: "Nunito", sans-serif;
         border-radius: 12px;
         font-weight: bold;
         background: f8f8f8;
+        width: 45%;
     }
 
     .store { 
@@ -146,7 +151,7 @@
       border-bottom: 1px solid #4f7df9;
       text-align: center;
       font-size: 15px;
-      height: 35px;    /* Set a fixed height for the input box */
+      height: 35px;    
       font-family: "Nunito", sans-serif;
       border-radius: 12px;
       font-weight: bold;
@@ -155,13 +160,13 @@
 
     .store label{
       display: block;
-      font-size: 18px;
-      font-weight: 600;
+      font-size: 17px;
+      font-weight: 550;
       color: #000;
       margin-bottom: 20px;
     }
 
-    .gender {
+    .status {
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -176,27 +181,26 @@
   .text {
     color: #000; 
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     font-family: "Nunito", sans-serif;
+    font-weight: 550;
+
 }
     /* Style for Radio */
-  .gender .container {
+  .status .container {
     color: black;
       display: block;
       position: relative;
       padding-left: 35px;
-      /* margin-bottom: 12px; */
+     margin-bottom: 5px;
       margin-top: 7px;
       cursor: pointer;
       font-size: 22px;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
+      
     }
     
     /* Hide the browser's default radio button */
-    .gender .container input {
+    .status .container input {
       position: absolute;
       opacity: 0;
       cursor: pointer;
@@ -214,29 +218,29 @@
     }
     
     /* On mouse-over, add a grey background color */
-    .gender .container:hover input ~ .checkmark {
+    .status .container:hover input ~ .checkmark {
       background-color: #ccc;
     }
     
     /* When the radio button is checked, add a blue background */
-    .gender .container input:checked ~ .checkmark {
+    .status .container input:checked ~ .checkmark {
       background-color: #2196F3;
     }
     
-    /* Create the indicator (the dot/circle - hidden when not checked) */
+    /* Create the indicator */
     .checkmark:after {
       content: "";
       position: absolute;
       display: none;
     }
     
-    /* Show the indicator (dot/circle) when checked */
-    .gender .container input:checked ~ .checkmark:after {
+    /* Show the indicator when checked */
+    .status .container input:checked ~ .checkmark:after {
       display: block;
     }
     
-    /* Style the indicator (dot/circle) */
-    .gender .container .checkmark:after {
+    /* Style the indicator  */
+    .status .container .checkmark:after {
          top: 9px;
         left: 9px;
         width: 8px;
@@ -246,72 +250,71 @@
     }
     /* END Style for Radio */
 
-
-    
     .inputW {
-        background: #f8f8f8;
-        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
-        border-radius: 12px;
-        padding: 10px 0;
-        margin-bottom: 20px;
-        width: 50%;
-        height: 110px; 
-
-    }
-
-
-    .inputW label {
-        display: block;
-        font-size: 17px;
-        font-weight: 600;
-        color: #000;
-        margin-bottom: 20px;
-    }
-   .inputW input {
-        outline: none;
-        border: none;
-        border-bottom: 1px solid #4f7df9;
-      
-        text-align: center;
-        font-size: 28px;
-        font-family: "Nunito", sans-serif;
-        border-radius: 12px;
-    }
-
-    .inputH {
-        background: #f8f8f8;
-        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
-        border-radius: 12px;
-        padding: 10px 0;
-        margin-bottom: 20px;
-        margin-right: 20px;
-        width: 50%;
-        width: 50%;
-        height: 110px; 
-
-    }
+      background: #f8f8f8;
+      box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+      border-radius: 12px;
+      padding: 10px 0;
+      margin-bottom: 10px;
+      width: 50%;
+      height: 110px;
+  }
 
 
-    .inputH label {
-        display: block;
-        font-size: 17px;
-        font-weight: 600;
-        color: #000;
-        margin-bottom: 20px;
-    }
-   .inputH input {
-        outline: none;
-        border: none;
-        border-bottom: 1px solid #4f7df9;
-        padding: 10px;  
-        text-align: center;
-        font-size: 17px;
-        font-weight: bold;
-        font-family: "Nunito", sans-serif;
-        width: 60%;
-        height: 40%; 
-        border-radius: 12px;
-    }
+  .inputW label {
+      display: block;
+      font-weight: 550;
+      color: #000;
+      margin-bottom: 20px;
+  }
+
+ .inputW input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #4f7df9;
+  padding: 10px;  
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  width: 80%;
+  height: 35%; 
+  border-radius: 12px;
+  }
+
+  .inputH {
+      background: #f8f8f8;
+      box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+      border-radius: 12px;
+      padding: 10px 0;
+      margin-bottom: 10px;
+      margin-right: 20px;
+      width: 50%;
+      height: 110px; 
+
+  }
+
+  .inputH label {
+      display: block;
+      font-weight: 550;
+      color: #000;
+      margin-bottom: 20px;
+  }
+
+ .inputH input {
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #4f7df9;
+      padding: 10px;  
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: "Nunito", sans-serif;
+      width: 80%;
+      height: 35%; 
+      border-radius: 12px;
+  }
+   
 
    .button-container {
   margin-top: 20px;
@@ -369,7 +372,7 @@
   width: 80%;
   max-width: 600px; /* Set the maximum width */
   margin: 0 auto; /* Center horizontally */
-  height: auto; /* Adjust height as needed */
+  height: auto; 
 }
  
 .result {
@@ -446,7 +449,7 @@
 
 @media screen and (max-width: 768px) {
   .popup-content {
-      max-width: 90%; /* Adjust maximum width for smaller screens */
+      max-width: 90%; 
   }
 }
 
@@ -489,4 +492,29 @@
 
 #suggestionsDropdown li:hover {
   background-color: #ddd;
+}
+
+/* Tooltip text */
+label[title]::after {
+  content: attr(title);
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px; 
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+
+label:hover::after {
+  visibility: visible;
+  opacity: 1;
 }
