@@ -246,7 +246,7 @@ TOPS Stanger Spot On
 SPAR The Acres
 TOPS Acres
 SUPERSPAR Karaglen
-Vorna Valley
+SPAR Vorna Valley
 TOPS Vorna Valley
 SUPERSPAR Middelburg Mall
 TOPS Middelburg Mall
@@ -341,9 +341,9 @@ Newcastle Crossings TOPS
 Palm Grove SPAR
 Palm Grove TOPS
 Paarl East SUPERSPAR
-Paarl East Tops
+Paarl East TOPS
 SPAR Burt Drive
-Tops Burt drive
+TOPS Burt drive
 Melkbos TOPS
 KWIKSPAR Erasmia
 SPAR Naboom
@@ -362,7 +362,7 @@ TOPS Sunningdale
 SPAR Newrest SPARGS
 TOPS Newrest SPARGS
 Hibberdene SUPERSPAR
-UmkomaasSUPERSPAR
+Umkomaas SUPERSPAR
 SUPERSPAR Retail Crossing
 SUPERSPAR TAMS
 TOPS TAMS
@@ -407,7 +407,7 @@ Olivedale SUPERSPAR
 Olivedale TOPS
 Kwantu SPAR
 Kwantu TOPS
-Geelhout 
+Geelhout SPAR
 Clayville Superspar (Mall of Tembisa)
 Clayville TOPS (Mall of Tembisa)
 SPAR Eyethu ( DC Staff Shop)
@@ -415,8 +415,8 @@ Randfontein
 Randfontein Tops
 Stilbaai SPAR
 Stilbaai TOPS
-Mini Market
-Mini Market Tops
+Mini Market SPAR
+Mini Market TOPS
 SUPERSPAR Swellendam
 TOPS Swellendam
 Constantia SPAR
@@ -458,7 +458,7 @@ Ridge KWIKSPAR
 Goldengate SPAR
 Goldengate TOPS
 Waterloo SUPERSPAR
-WaterlooTOPS
+Waterloo TOPS
 Mt Edgecombe KWIKSPAR
 Mt Edgecombe TOPS
 Mtunzini SPAR
@@ -479,28 +479,28 @@ Manaba SPAR
 Manaba TOPS
 Midrand SUPERSPAR
 Midrand TOPS
-Hobart
+Hobart SPAR
 Hobart TOPS
 Super A Norwood SPAR
 Super A Norwood TOPS
-Riverview
-The Falls
+Riverview SPAR
+The Falls SPAR
 The Falls Tops
 Dericks KWIKSPAR
 Dericks TOPS
-Empire
+Empire SPAR
 Empire TOPS
-Meditas Spar
+Meditas SPAR
 Meditas Tops 
-Vyfhoek
+Vyfhoek SPAR
 Vyfhoek TOPS
 Fairlands TOPS
-Fivestar Superspar 
-Fivestar Tops 
-Fourway
+Fivestar SUPERSPAR
+Fivestar TOPS
+Fourway SPAR
 Fourway TOPS
-Aljos Spar
-Aljos Tops
+Aljos SPAR
+Aljos TOPS
 SPAR Orchards
 Machado SaveMor 
 Machado TOPS 

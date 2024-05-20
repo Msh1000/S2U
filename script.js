@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
   
-  var selectNumber = document.getElementById("weight"); //same id is weight
-  selectNumber.addEventListener("change", generateFields);
-
   var calculateButton = document.getElementById("calculateButton"); //same
   calculateButton.addEventListener("click", calculate);
 
@@ -14,6 +11,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var storeNameInput = document.getElementById("textInput");
   storeNameInput.addEventListener("input", predictiveSearch);
+
+// Get references to the radio buttons
+var deliveredRadio = document.getElementById('od');
+var cancelledRadio = document.getElementById('oc');
+
+var capAmount =  document.getElementById('Captured');
+
+deliveredRadio.addEventListener('change', function() {
+    if (this.checked) {
+        //console.log('Order Delivered radio button selected');
+        capAmount.value = "";
+        capAmount.disabled = false;
+    }
+});
+
+cancelledRadio.addEventListener('change', function() {
+    if (this.checked) {
+        //console.log('Order Cancelled radio button selected');
+        capAmount.value = 0;
+        capAmount.disabled = true;
+        capAmount.setAttribute('title', 'Order has been cancelled captured amount cannot be changed.' )
+    }
+});
+
 
   fetch('storeNames.txt')
         .then(response => response.text())
@@ -92,8 +113,9 @@ function predictiveSearch() {
      }
  
       var storeName = document.getElementById("textInput").value;
-      var orderAmount = document.getElementById("numberInput").value;
-      var orderNumber = document.getElementById("height").value;
+      var totalAmount = document.getElementById("Total").value; // Total amount
+      var capAmount = document.getElementById("Captured").value; // Captured amount
+      var orderNumber = document.getElementById("orderInput").value; // 
       var warning = document.getElementById("warningMessage").value;
 
       // Get selected radio button value
@@ -106,13 +128,13 @@ function predictiveSearch() {
           }
       }
     
-        var calculatedReservationFee = orderAmount *0.1;
-        var calculatedTotal = calculatedReservationFee + orderAmount *1;
-        var calculatedRefundAmount = sumOfNumberFields + calculatedReservationFee;
-        var calculatedSettlementAmount = orderAmount - sumOfNumberFields;
-       
-        if(orderAmount == ""){
-          document.getElementById("warningMessage").textContent = "Fill In Order Amount Field!";
+        var calculatedReservationFee = totalAmount *0.1;
+        var calculatedTotal = calculatedReservationFee + totalAmount *1;
+        var calculatedRefundAmount = calculatedTotal - capAmount;
+        var calculatedSettlementAmount = capAmount *1;
+
+        if(totalAmount == "" || capAmount == "" ){
+          document.getElementById("warningMessage").textContent = "Fill In Amount Fields!";
         }
 
         else if (calculatedTotal < 0 || calculatedSettlementAmount < 0 || calculatedRefundAmount < 0) {
@@ -131,7 +153,8 @@ function predictiveSearch() {
 
         } 
 
-    else{
+       
+        else{
         // Update HTML elements with calculated values
         document.getElementById("orderNumberOutput").textContent = "Order Number: # " + orderNumber;
         document.getElementById("reservationFeeOutput").textContent = "Reservation Fee: R " + calculatedReservationFee.toFixed(2);
@@ -141,13 +164,15 @@ function predictiveSearch() {
         document.getElementById("storeNameOutput").textContent = "Store Name: " + storeName ;
         document.getElementById("warningMessage").textContent = "";
         copyAndSendButton.removeAttribute("disabled");
-      var warningMessage = document.getElementById("warningMessage");
-    warningMessage.textContent = ""; // Clear warning message
-
+        copyAndSendButton.classList.add("breathe-animation");
+        var warningMessage = document.getElementById("warningMessage");
+        warningMessage.textContent = ""; // Clear warning message
+        
+        }
     }
 
 
-}
+
 
 
 
@@ -174,10 +199,10 @@ function predictiveSearch() {
   }
   
   function shareOutput() {
-    var totalOrderAmount = document.getElementById("totalOutput").textContent;
+    var totaltotalAmount = document.getElementById("totalOutput").textContent;
     var settlementAmount = document.getElementById("settlementAmountOutput").textContent;
     var refundAmount = document.getElementById("refundAmountOutput").textContent;
-    var orderNumber = document.getElementById("height").value; // Get the order number from input
+    var orderNumber = document.getElementById("orderInput").value; // Get the order number from input
     var storeName = document.getElementById("textInput").value;
 
     // Get selected radio button value
@@ -194,13 +219,13 @@ var selectedStore ="";
 
     if (orderStatus === "Order Delivered") {
       
-      console.log("Order is in status D. Performing action 1.");
-      var outputText = "Store Name: " + storeName  + "\n\nOrder Number: #" + orderNumber + "\n\n" + totalOrderAmount + "\n\n" + settlementAmount + "\n\n" + refundAmount;
+      //console.log("Order is in status D.");
+      var outputText = "Store Name: " + storeName  + "\n\nOrder Number: #" + orderNumber + "\n\n" + totaltotalAmount + "\n\n" + settlementAmount + "\n\n" + refundAmount;
       var keyWord = "refund";
     } else {
      
-      console.log("Order is not in status D. Performing action 2.");
-      var outputText = "Store Name: " + storeName  + "\n\nOrder Number: #" + orderNumber + "\n\n" + totalOrderAmount;
+      //console.log("Order is not in status D.");
+      var outputText = "Store Name: " + storeName  + "\n\nOrder Number: #" + orderNumber + "\n\n" + totaltotalAmount;
       var keyWord = "reversal";
     }
   
@@ -232,9 +257,10 @@ var selectedStore ="";
 
   // Open email 
   var emailBody = encodeURIComponent("Hi TJ,\n \nPlease advise if the below SPAR2U" + " " + keyWord + " " + "has been processed:\n\n" + outputText + "\n\n");
-  var ccEmails = 'dhashen.govender@spar.co.za; Mohammed.Haroun@spar.co.za; retailhelpdeskco@spar.co.za'
+  var ccEmails = 'dhashen.govender@spar.co.za; Mohammed.Haroun@spar.co.za; Nadia.Karreem@spar.co.za; retailhelpdeskco@spar.co.za'
   var emailLink = "mailto:support@switch.tj?subject=SPAR2U Refund Query - Order #"+orderNumber + " || " + storeName + " " + selectedStore + "&body=" + emailBody + "&cc=" + ccEmails;
   window.location.href = emailLink;
+  copyAndSendButton.classList.remove("breathe-animation");
 }
 
 function closePopup() {
@@ -245,6 +271,7 @@ function closePopup() {
   var popupOverlay = document.querySelector(".popup-overlay");
   popupOverlay.removeEventListener("click", closePopup);
 }
+
 
   
   
