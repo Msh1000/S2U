@@ -560,3 +560,4 @@ SPAR Weltevreden
 SPAR Oudtshoorn
 TOPS Oudtshoorn
 TOPS On First
+SUPERSPAR Eyethu
